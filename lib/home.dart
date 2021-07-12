@@ -57,15 +57,49 @@ class _FlareDemoState extends State<Home> {
 
 
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 102, 18, 222),
-        body: Align(
-            alignment: Alignment.bottomCenter,
-            child: SmartFlareActor(
-              width: animationWidth,
-              height: animationHeight,
-              filename: 'assets/button-animation.flr',
-              startingAnimation: 'deactivate',
-              activeAreas: activeAreas,
-            )));
+        backgroundColor: Colors.white60,
+        body: Stack(
+          children: [
+
+            Padding(
+
+              padding: const EdgeInsets.all(8.0),
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left:8.0 ,right: 8.0),
+                    child: Row(
+                      children: [
+                        Icon(Icons.person_rounded
+                          ,color: Colors.white
+                          ,size: 25,),
+                        Spacer(),
+                        Icon(Icons.person_rounded
+                          ,color: Colors.white
+                          ,size: 25,),
+                      ],
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(8)
+                  ),
+
+                  height: 60,
+                ),
+              ),
+            ),
+            Align(
+                alignment: Alignment.bottomCenter,
+                child: SmartFlareActor(
+                  width: animationWidth,
+                  height: animationHeight,
+                  filename: 'assets/button-animation.flr',
+                  startingAnimation: 'deactivate',
+                  activeAreas: activeAreas,
+                )),
+          ],
+        ));
   }
 }
