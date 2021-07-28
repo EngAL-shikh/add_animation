@@ -1,6 +1,6 @@
-# flareanmit
+# Simple add Animaition
 
-A new Flutter application.
+https://user-images.githubusercontent.com/69796956/127274911-6f905df9-3190-45c2-91d1-637ca2e54215.mp4
 
 ## Getting Started
 
